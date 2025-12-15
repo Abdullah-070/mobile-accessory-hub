@@ -1,0 +1,30 @@
+# =============================================================================
+# Mobile Accessory Inventory System - Python Frontend
+# Requirements File
+# =============================================================================
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# Qt Framework for Python - GUI toolkit
+PySide6>=6.5.0
+
+# Database connectivity for SQL Server
+pyodbc>=4.0.39
+
+# Password hashing with bcrypt
+passlib[bcrypt]>=1.7.4
+
+# Configuration file parsing (built-in, but listed for clarity)
+# configparser is part of Python standard library
+
+# Optional: For CSV import functionality
+pandas>=2.0.0
+
+# Optional: Environment variable loading from .env files
+python-dotenv>=1.0.0
+
+# Optional: For generating reports/charts
+# matplotlib>=3.7.0
+
+# Optional: For PDF invoice generation
+# reportlab>=4.0.0

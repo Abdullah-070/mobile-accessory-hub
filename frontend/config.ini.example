@@ -1,0 +1,66 @@
+# =============================================================================
+# Database Configuration File (EXAMPLE)
+# =============================================================================
+# IMPORTANT: Copy this file to 'config.ini' and fill in your actual values.
+# NEVER commit config.ini with real credentials to version control!
+# =============================================================================
+
+[database]
+# SQL Server connection settings
+# Driver: ODBC Driver 18 for SQL Server (recommended) or ODBC Driver 17
+driver = ODBC Driver 18 for SQL Server
+
+# Server name (use localhost for local instance, or server\instance for named)
+server = localhost
+
+# Database name (must match the database created by the SQL script)
+database = MobileAccessoryInventory
+
+# Authentication method: 
+# - For Windows Authentication: leave username and password empty
+# - For SQL Server Authentication: provide username and password
+username = 
+password = 
+
+# Trust server certificate (set to yes for development with self-signed certs)
+trust_server_certificate = yes
+
+# Connection timeout in seconds
+timeout = 30
+
+[application]
+# Application settings
+app_name = Mobile Accessory Inventory System
+version = 1.0.0
+
+# Default admin credentials (for initial setup only)
+# These should be changed immediately after first login
+default_admin_username = admin
+
+# Session timeout in minutes (0 = no timeout)
+session_timeout = 30
+
+# Enable debug mode (shows detailed error messages)
+debug = false
+
+[paths]
+# File paths for assets
+icons_folder = assets/icons
+images_folder = assets/images
+reports_folder = reports
+
+[ui]
+# UI customization
+theme = default
+font_family = Segoe UI
+font_size = 10
+primary_color = #2196F3
+accent_color = #FF9800
+
+[security]
+# Admin setup code required for admin account self-registration
+# Change this to a secure value in production!
+# This code is ONLY used for admin self-signup (if enabled).
+# IMPORTANT: Employee accounts can ONLY be created by Admin users.
+# There is no employee self-signup - admins must create all employee accounts.
+admin_setup_code = ADMIN123

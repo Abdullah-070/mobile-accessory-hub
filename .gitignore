@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyQt/PySide
+*.ui.autosave
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Configuration (sensitive)
+frontend/config.ini
+
+# Database
+*.bak
+*.mdf
+*.ldf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Application specific
+frontend/data/pending_employees.json
+*.ico.bak
