@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -23,33 +20,40 @@ wheels/
 .installed.cfg
 *.egg
 
-# PyQt/PySide
-*.ui.autosave
+# Virtual Environment
+venv/
+env/
+ENV/
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Logs
+# Project specific
+frontend/config.ini
+frontend/__pycache__/
+frontend/repositories/__pycache__/
+frontend/views/__pycache__/
+frontend/utils/__pycache__/
+frontend/data/pending_employees.json
+frontend/logs/
 logs/
 *.log
-
-# Configuration (sensitive)
-frontend/config.ini
-
-# Database
-*.bak
-*.mdf
-*.ldf
 
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Application specific
-frontend/data/pending_employees.json
-*.ico.bak
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
