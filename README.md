@@ -15,10 +15,6 @@ A professional desktop application for managing mobile accessory retail inventor
 - **Purchase Orders**: Record inventory purchases from suppliers
 - **Reports**: Sales and inventory reports (Admin only)
 
-## Screenshots
-
-(Screenshots would go here)
-
 ## Requirements
 
 ### Software Requirements
