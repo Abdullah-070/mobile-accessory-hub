@@ -51,7 +51,7 @@ class RoleTile(QFrame):
         # Icon
         icon_label = QLabel(icon)
         icon_label.setAlignment(Qt.AlignCenter)
-        icon_label.setStyleSheet(f"font-size: 48pt;")
+        icon_label.setStyleSheet(f"font-size: 36pt;")
         layout.addWidget(icon_label)
         
         # Title
@@ -79,14 +79,14 @@ class RoleTile(QFrame):
         self.login_btn.setCursor(Qt.PointingHandCursor)
         self.login_btn.setStyleSheet(f"""
             QPushButton {{
-                background-color: {self.color};
-                color: white;
-                border: none;
+                background-color: transparent;
+                color: {self.color};
+                border: 2px solid {self.color};
                 border-radius: 6px;
                 font-size: 11pt;
                 font-weight: bold;
             }}
-            QPushButton:hover {{ background-color: {self.color}DD; }}
+            QPushButton:hover {{ background-color: {self.color}15; }}
         """)
         self.login_btn.clicked.connect(self.login_clicked.emit)
         layout.addWidget(self.login_btn)

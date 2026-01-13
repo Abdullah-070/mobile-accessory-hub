@@ -229,7 +229,7 @@ class SupplierView(QWidget):
         self.supplier_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.supplier_table.setSortingEnabled(True)
         self.supplier_table.verticalHeader().setVisible(False)
-        self.supplier_table.verticalHeader().setDefaultSectionSize(60)
+        self.supplier_table.verticalHeader().setDefaultSectionSize(100)
         
         header = self.supplier_table.horizontalHeader()
         header.setSectionResizeMode(0, QHeaderView.ResizeToContents)

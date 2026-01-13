@@ -241,7 +241,7 @@ class CustomerView(QWidget):
         self.customer_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.customer_table.setSortingEnabled(True)
         self.customer_table.verticalHeader().setVisible(False)
-        self.customer_table.verticalHeader().setDefaultSectionSize(60)
+        self.customer_table.verticalHeader().setDefaultSectionSize(100)
         
         header = self.customer_table.horizontalHeader()
         header.setSectionResizeMode(0, QHeaderView.ResizeToContents)

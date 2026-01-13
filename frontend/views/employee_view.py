@@ -280,7 +280,7 @@ class EmployeeView(QWidget):
         self.employee_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.employee_table.setSortingEnabled(True)
         self.employee_table.verticalHeader().setVisible(False)
-        self.employee_table.verticalHeader().setDefaultSectionSize(60)
+        self.employee_table.verticalHeader().setDefaultSectionSize(100)
         self.employee_table.setWordWrap(False)
         
         header = self.employee_table.horizontalHeader()

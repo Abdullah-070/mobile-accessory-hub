@@ -906,6 +906,9 @@ class ProductFormView(QWidget):
         if self.price_input.value() <= 0:
             errors.append("Selling price must be greater than zero")
         
+        if self.cost_input.value() > self.price_input.value():
+            errors.append("Cost price cannot be greater than selling price")
+        
         # For new products, require supplier and cost price
         if not self.is_edit_mode:
             if self.supplier_combo.currentData() is None:

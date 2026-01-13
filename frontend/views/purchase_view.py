@@ -415,7 +415,7 @@ class PurchaseView(QWidget):
         self.purchase_table.setAlternatingRowColors(True)
         self.purchase_table.setSelectionBehavior(QTableWidget.SelectRows)
         self.purchase_table.setEditTriggers(QTableWidget.NoEditTriggers)
-        self.purchase_table.verticalHeader().setDefaultSectionSize(50)
+        self.purchase_table.verticalHeader().setDefaultSectionSize(100)
         
         main_layout.addWidget(self.purchase_table)
         
@@ -579,6 +579,12 @@ class PurchaseView(QWidget):
         self.purchase_table.setRowCount(len(self.purchases))
         
         for row, purchase in enumerate(self.purchases):
+            # Load full purchase details if not already loaded
+            if not purchase.details:
+                full_purchase = PurchaseRepository.get_by_id(purchase.purchase_no)
+                if full_purchase:
+                    purchase = full_purchase
+            
             # Purchase No
             self.purchase_table.setItem(row, 0, QTableWidgetItem(purchase.purchase_no))
             
@@ -590,7 +596,7 @@ class PurchaseView(QWidget):
             supplier_name = purchase.supplier_name or purchase.supplier_id
             self.purchase_table.setItem(row, 2, QTableWidgetItem(supplier_name))
             
-            # Item count
+            # Item count - count the details from loaded purchase
             item_count = len(purchase.details) if purchase.details else 0
             self.purchase_table.setItem(row, 3, QTableWidgetItem(str(item_count)))
             

@@ -342,6 +342,8 @@ class DashboardView(QWidget):
         self.recent_sales_table.setEditTriggers(QTableWidget.NoEditTriggers)
         self.recent_sales_table.setSelectionBehavior(QTableWidget.SelectRows)
         self.recent_sales_table.setMaximumHeight(250)
+        # Hide vertical header (row numbers) to show more content
+        self.recent_sales_table.verticalHeader().setVisible(False)
         recent_sales_layout.addWidget(self.recent_sales_table)
         
         view_all_sales_btn = QPushButton("View All Sales")
@@ -464,6 +466,12 @@ class DashboardView(QWidget):
             self.recent_sales_table.setRowCount(len(sales))
             
             for row, sale in enumerate(sales):
+                # Load full sale details if not already loaded
+                if not sale.details:
+                    full_sale = SaleRepository.get_by_id(sale.invoice_no)
+                    if full_sale:
+                        sale = full_sale
+                
                 # Date
                 date_item = QTableWidgetItem(
                     format_date(sale.sale_date) if sale.sale_date else ""
@@ -475,8 +483,9 @@ class DashboardView(QWidget):
                 customer_item = QTableWidgetItem(customer_text)
                 self.recent_sales_table.setItem(row, 1, customer_item)
                 
-                # Items count (placeholder - would need to join with details)
-                items_item = QTableWidgetItem("-")
+                # Items count - now showing actual count from details
+                item_count = len(sale.details) if sale.details else 0
+                items_item = QTableWidgetItem(str(item_count))
                 self.recent_sales_table.setItem(row, 2, items_item)
                 
                 # Total

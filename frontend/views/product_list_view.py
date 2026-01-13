@@ -172,7 +172,7 @@ class ProductListView(QWidget):
         self.product_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.product_table.setSortingEnabled(True)
         self.product_table.verticalHeader().setVisible(False)
-        self.product_table.verticalHeader().setDefaultSectionSize(60)
+        self.product_table.verticalHeader().setDefaultSectionSize(100)
         
         # Column widths
         header = self.product_table.horizontalHeader()
@@ -472,7 +472,7 @@ class ProductListView(QWidget):
         
         # Edit button with blue border and text
         edit_btn = QPushButton("Edit")
-        edit_btn.setFixedWidth(70)
+        edit_btn.setFixedWidth(65)
         edit_btn.setFixedHeight(40)
         edit_btn.setStyleSheet("""
             QPushButton {
@@ -496,7 +496,7 @@ class ProductListView(QWidget):
         
         # Delete button with red border and text
         delete_btn = QPushButton("Delete")
-        delete_btn.setFixedWidth(85)
+        delete_btn.setFixedWidth(80)
         delete_btn.setFixedHeight(40)
         delete_btn.setStyleSheet("""
             QPushButton {

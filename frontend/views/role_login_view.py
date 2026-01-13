@@ -124,14 +124,14 @@ class RoleLoginView(QWidget):
         self.login_btn.setCursor(Qt.PointingHandCursor)
         self.login_btn.setStyleSheet(f"""
             QPushButton {{
-                background-color: {self.color};
-                color: white;
-                border: none;
+                background-color: transparent;
+                color: {self.color};
+                border: 2px solid {self.color};
                 border-radius: 6px;
                 font-size: 12pt;
                 font-weight: bold;
             }}
-            QPushButton:hover {{ background-color: {self.color}DD; }}
+            QPushButton:hover {{ background-color: {self.color}15; }}
             QPushButton:disabled {{ background-color: #BDBDBD; }}
         """)
         form_layout.addWidget(self.login_btn)
@@ -144,7 +144,18 @@ class RoleLoginView(QWidget):
         self.back_btn = QPushButton("← Back to Role Selection")
         self.back_btn.setFlat(True)
         self.back_btn.setCursor(Qt.PointingHandCursor)
-        self.back_btn.setStyleSheet(f"color: {self.color}; font-size: 10pt;")
+        self.back_btn.setStyleSheet(f"""
+            QPushButton {{
+                background-color: transparent;
+                color: {self.color};
+                border: 2px solid {self.color};
+                border-radius: 6px;
+                font-size: 12pt;
+                font-weight: bold;
+            }}
+            QPushButton:hover {{ background-color: {self.color}15; }}
+            QPushButton:disabled {{ background-color: #BDBDBD; }}
+        """)
         main_layout.addWidget(self.back_btn, alignment=Qt.AlignCenter)
         
         main_layout.addStretch(1)
