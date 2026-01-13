@@ -239,10 +239,10 @@ pip install -r requirements.txt
 3. Implement `get_all()`, `get_by_id()`, `create()`, `update()`, `delete()` methods
 4. Update `repositories/__init__.py` with the new import
 
-## Contributors
+## Developed By
 
-- **Developer**: Muhammad Abdullah
-- **Co-Developer**: Muneeb Tahir
+- Muhammad Abdullah
+- Muneeb Tahir
 
 ## License
 
