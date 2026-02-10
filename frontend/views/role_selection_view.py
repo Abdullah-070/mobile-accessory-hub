@@ -190,7 +190,7 @@ class RoleSelectionView(QWidget):
         main_layout.addStretch(1)
         
         # Footer
-        footer = QLabel("© 2024 Mobile Accessory Inventory System")
+        footer = QLabel("© 2025 Mobile Accessory Inventory System")
         footer.setAlignment(Qt.AlignCenter)
         footer.setStyleSheet("color: #9E9E9E; font-size: 9pt;")
         main_layout.addWidget(footer)

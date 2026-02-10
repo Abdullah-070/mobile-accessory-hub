@@ -212,7 +212,7 @@ class LoginView(QWidget):
         # FOOTER
         # =====================================================================
         
-        footer_label = QLabel("© 2024 Mobile Accessory Inventory System")
+        footer_label = QLabel("© 2025 Mobile Accessory Inventory System")
         footer_label.setAlignment(Qt.AlignCenter)
         footer_label.setStyleSheet("color: #9E9E9E; font-size: 9pt;")
         main_layout.addWidget(footer_label)
